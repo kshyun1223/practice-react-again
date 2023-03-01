@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
