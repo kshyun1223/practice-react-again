@@ -37,11 +37,11 @@ module.exports = {
   ],
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
   },
   
   devServer: { // webpack-dev-server 옵션
-    static: path.resolve(__dirname, 'dist'),
+    static: path.resolve(__dirname, 'docs'),
     historyApiFallback: true, // 404 페이지 대신 index.html로 이동
     hot: true, // 모듈 전체를 다시 로드하지 않고 변경된 사항만 갱신
   },
