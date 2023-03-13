@@ -7,15 +7,29 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx|ts|tsx)$/,
+        test: /\.(js|jsx)$/,
         loader: "babel-loader",
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(ts|tsx)?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(png)$/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.(css)$/i,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './public/index.html',
+      favicon: './public/asset/favicon.png',
     }),
     new webpack.ProvidePlugin({
       React: 'react',
