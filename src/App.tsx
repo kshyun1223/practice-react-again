@@ -1,23 +1,19 @@
 import React from 'react';
-import styled from 'styled-components'
-import SquirtleSrc from '../public/asset/squirtle.png'
+import { Link, Outlet } from 'react-router-dom';
 
 export default function App(){
   return (
-    <Container>
-      <h1>No CRA!!!</h1>
-      <Squirtle src={SquirtleSrc} />
-    </Container>
+    <div>
+      <h1>React is a library not a framework</h1>
+      <nav style={{
+        borderBottom: "solid 1px",
+        paddingBottom: "1rem",
+      }}>
+        <Link to="/Home">Home</Link>
+        {" | "}
+        <Link to="/about">About</Link>
+      </nav>
+      <Outlet />
+    </div>
   )
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const Squirtle = styled.img`
-  
-`
-
