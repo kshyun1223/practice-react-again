@@ -1,8 +1,10 @@
 import React from 'react';
-import styled from 'styled-components'
-import SquirtleSrc from '../public/asset/squirtle.png'
 
-export default function Welcome(){
+import styled from 'styled-components'
+import SquirtleSrc from '../../public/asset/squirtle.png'
+
+export default function Home(){
+  
   return (
     <Container>
       <h1>No CRA!!!</h1>
@@ -12,12 +14,8 @@ export default function Welcome(){
 }
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `
 
 const Squirtle = styled.img`
-  
 `
 
